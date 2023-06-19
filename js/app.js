@@ -59,8 +59,12 @@ class TodoList {
         // 日付の表示
         const dateText = document.createElement("span");
         const date = new Date();
-        const options = { year: "numeric", month: "short", day: "numeric" };
+        const options = { year: "numeric", month: "numeric", day: "numeric" };
         dateText.textContent = date.toLocaleDateString("ja-JP", options);
+
+        // const options = { year: "numeric", month: "short", day: "numeric" };
+        // dateText.textContent = date.toLocaleDateString("ja-JP", options);
+        
         liElm.appendChild(dateText);
 
         backButton.classList.add("complete-button");
