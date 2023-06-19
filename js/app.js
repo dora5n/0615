@@ -16,6 +16,13 @@ class TodoList {
         const deleteButton = document.createElement("button");
         const completeButton = document.createElement("button");
 
+        // 日付の表示
+        const dateText = document.createElement("span");
+        const date = new Date();
+        const options = { year: "numeric", month: "short", day: "numeric" };
+        dateText.textContent = date.toLocaleDateString("ja-JP", options);
+        liElm.appendChild(dateText);
+
         completeButton.classList.add("complete-button");
         completeButton.innerText = "完了";
         deleteButton.classList.add("incomplete-button");
@@ -48,6 +55,13 @@ class TodoList {
         const liElm = document.createElement("li");
         const pElm = document.createElement("p");
         const backButton = document.createElement("button");
+
+        // 日付の表示
+        const dateText = document.createElement("span");
+        const date = new Date();
+        const options = { year: "numeric", month: "short", day: "numeric" };
+        dateText.textContent = date.toLocaleDateString("ja-JP", options);
+        liElm.appendChild(dateText);
 
         backButton.classList.add("complete-button");
         backButton.innerText = "戻る";
@@ -126,3 +140,28 @@ class TodoList {
         
         document.querySelector(".add-button").addEventListener("click", addTodoEvent);
         document.addEventListener
+
+
+        function addTodoEvent() {
+            const addItemTxt = document.querySelector(".add-item").value;
+            if (addItemTxt == "") {
+                alert("値を入力してください");
+                return;
+            }
+            document.querySelector(".add-item").value = "";
+            
+            const totoList = new TodoList();
+            totoList.addItem(addItemTxt);
+        }
+        
+        document.querySelector(".add-button").addEventListener("click", addTodoEvent);
+        
+        // キーボードのEnterを押した際の処理
+        document.querySelector(".add-item").addEventListener("keypress", function (event) {
+            if (event.key === "Enter") {
+                addTodoEvent();
+            }
+        });
+
+
+        
