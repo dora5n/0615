@@ -12,7 +12,7 @@ body {
 h1 {
   font-size: 1.5em;
   padding: 0.5em;
-  background: #e9ead5;
+  background: #eef0c8;
   margin: 0;
   text-align: center;
 }
@@ -87,7 +87,7 @@ li p {
   font-weight: bold;
   border-radius: 10px;
   margin: 0;
-  background: #04945d;
+  background: black;
   padding: 10px;
   text-align: center;
 }
@@ -109,7 +109,7 @@ li p {
   font-weight: bold;
   border-radius: 10px;
   margin: 0;
-  background: #c79b49;
+  background: blue;
   padding: 10px;
   text-align: center;
 }
@@ -117,4 +117,45 @@ li p {
 .item-area-complete button {
   flex: 0 0 80px;
   margin-left: auto;
+}
+
+
+@media (max-width: 600px) {
+  .main {
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+  }
+
+  input {
+    width: 60%;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+  
+  li p {
+    font-size: 14px;
+  }
+  
+  .add-item-area,
+  .item-area-incomplete,
+  .item-area-complete {
+    margin: 10px 0;
+    padding: 5px;
+  }
+  
+  .item-area-incomplete .ttl,
+  .item-area-complete .ttl {
+    font-size: 14px;
+    padding: 5px;
+  }
+  
+  .item-area-incomplete button,
+  .item-area-complete button {
+    flex: 0 0 60px;
+  }
 }
