@@ -119,7 +119,6 @@ li p {
   margin-left: auto;
 }
 
-
 @media (max-width: 600px) {
   .main {
     width: 90%;
@@ -131,29 +130,29 @@ li p {
     width: 60%;
     margin-bottom: 10px;
   }
-  
+
   button {
     font-size: 14px;
     padding: 8px 16px;
   }
-  
+
   li p {
     font-size: 14px;
   }
-  
+
   .add-item-area,
   .item-area-incomplete,
   .item-area-complete {
     margin: 10px 0;
     padding: 5px;
   }
-  
+
   .item-area-incomplete .ttl,
   .item-area-complete .ttl {
     font-size: 14px;
     padding: 5px;
   }
-  
+
   .item-area-incomplete button,
   .item-area-complete button {
     flex: 0 0 60px;
